@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>CQ-NIR </title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="paper-title">
+                <div class="col">
+                    <div class="row"> <h1 class="short-title"> CQ-NIR </h1> </div>
+                    <div class="row"> <h3 class="long-title"> Coordinate Quantized Neural Implicit Representations for Multi-view Reconstruction </h3> </div>
+                    <div class="row"> <p class="conference-label"> ICCV 2023 </p> </div>
+                </div>
+            </div>
+
+            <div class="authors-list">
+                <div class="row">
+                    <div class="col">
+                        <div class="row"> <p class="author-name">Sijia Jiang</p> </div>
+                        <div class="row"> <p class="affiliation">Department of Computer Science</p> </div>
+                        <div class="row"> <p class="affiliation">Wayne State University</p> </div>
+                        <div class="row"> <p class="affiliation">Detroit, USA</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name"><a href="https://visiongraphics.github.io/">Jing Hua</a></p> </div>
+                        <div class="row"> <p class="affiliation">Department of Computer Science</p> </div>
+                        <div class="row"> <p class="affiliation">Wayne State University</p> </div>
+                        <div class="row"> <p class="affiliation">Detroit, USA</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name"><a href="https://h312h.github.io/">Zhizhong Han</a></p> </div>
+                        <div class="row"> <p class="affiliation">Department of Computer Science</p> </div>
+                        <div class="row"> <p class="affiliation">Wayne State University</p> </div>
+                        <div class="row"> <p class="affiliation">Detroit, USA</p> </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-link">
+                <div class="row">
+                    <div class="col">
+                        <a href="https://github.com/MachinePerceptionLab/CQ-NIR">
+                            <img class="resource-icon" src="./images/code.png" alt="code icon">
+                            <p class="resource-text">Code</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2022_DCC-DIF.pdf">
+                            <img class="resource-icon" src="./images/paper.png" alt="paper icon">
+                            <p class="resource-text">Paper</p>
+                        </a>
+                    </div>
+                    <!-- <div class="col">
+                        <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2022_DCC-DIF-supp.pdf">
+                            <img class="resource-icon" src="./images/supplement.png" alt="supplement icon">
+                            <p class="resource-text">Supplement</p>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="intro-images">
+                <div class="row">
+                    <img class="abstract-img1" src="./images/intro1.png" width="600" height="400" alt="abstract image">
+                    <img class="abstract-img2" src="./images/intro2.png" width="510" height="340" alt="abstract image">    
+                </div>
+            </div>
+
+            <div class="abstract">
+                <p class="abstract-title">
+                    Abstract
+                </p>
+                <p class="abstract-text">
+                    In recent years, huge progress has been made on learn- ing neural implicit representations
+                     from multi-view images for 3D reconstruction. As an additional input complementing coordinates,
+                      using sinusoidal functions as positional encodings plays a key role in revealing high frequency details
+                       with coordinate-based neural networks. However, high frequency positional encodings make the optimization
+                        unstable, which results in noisy reconstructions and artifacts in empty space. To resolve this issue in a general sense,
+                         we introduce to learn neural implicit representations with quantized coordinates, which reduces the uncertainty and
+                          ambiguity in the field during optimization. Instead of con- tinuous coordinates, we discretize continuous coordinates
+                           into discrete coordinates using nearest interpolation among quantized coordinates which are obtained by discretizing
+                            the field in an extremely high resolution. We use discrete coordinates and their positional encodings to learn
+                             implicit functions through volume rendering. This significantly reduces the variations in the sample space,
+                              and triggers more multi-view consistency constraints on intersections of rays from different views, which
+                               enables to infer implicit function in a more effective way. Our quantized coordinates do not bring any
+                                computational burden, and can seamlessly work upon the latest methods. Our evaluations under the widely
+                                 used benchmarks show our superiority over the state-of-the-art.
+                </p>
+            </div>
+
+            <div class="video">
+                <p class="video-title">
+                    Results: Video
+                </p>
+                <center>
+                    <video width="50%" height="50%" controls autoplay loop>
+                        <source src="./videos/display.mov" type="video/mp4"/>
+                        Your browser does not support the video tag.
+                    </video>
+                </center>
+            </div>
+
+            <div class="view-3D">
+                <p class="view-3D-title">
+                    Results: Vide in 3D
+                </p>
+                <center>
+                    <video width="50%" height="50%" controls autoplay loop>
+                        <source src="./videos/errormap.mov" type="video/mp4"/>
+                        Your browser does not support the video tag.
+                    </video>
+                </center>
+                <!-- <div class="row thingi">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/armour.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/nandi.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-s">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp3.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp4.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-s">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp5.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair3.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-l">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/plane1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/plane2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/watercraft1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-l">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/watercraft2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bench1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bench2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="citation">
+                <p class="citation-title">
+                    Citation
+                </p>
+                <p class="citation-text">
+                    @inproceedings{sijia2023quantized,</br>
+                        &ensp;&ensp;&ensp;&ensp;title={Coordinate Quantized Neural Implicit Representations for Multi-view 3D Reconstruction},</br>
+                        &ensp;&ensp;&ensp;&ensp;author={Sijia Jiang and Jing Hua and Zhizhong Han},</br>
+                        &ensp;&ensp;&ensp;&ensp;booktitle={{IEEE} International Conference on Computer Vision},</br>
+                        &ensp;&ensp;&ensp;&ensp;year={2023}</br>
+                    }
+                </p>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </body>
+
+</html>
